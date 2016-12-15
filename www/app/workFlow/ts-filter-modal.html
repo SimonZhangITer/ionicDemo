@@ -1,0 +1,58 @@
+<style>
+    .ts-filter-bg .ion-checkmark-round{
+        position: absolute;
+        right: 25px;
+        color: #26579e;
+    }
+</style>
+<div class="ts-filter-bg">
+    <ion-modal-view class="ts-filter-modal">
+        <ion-header-bar align-title="center" class="bar-modal modal-height">
+            <div class="buttons modal-button-margin">
+                <button class="button button-clear" ng-click="cancelFilter()">取消</button>
+            </div>
+            <h1 class="title modal-button-margin" style="color: white;" ng-click="clearFilterParams()">清空筛选</h1>
+
+            <div class="buttons modal-button-margin">
+                <button class="button button-clear" ng-click="confirmFilter()">确定</button>
+            </div>
+        </ion-header-bar>
+        <ion-content overflow-scroll="true" style="overflow: hidden;top:44px!important;">
+            <div class="row ts-filter-input" ng-if="false">
+                <div class="filter-text">全部
+                    <i class="ion-checkmark-round" style="padding-left: 8%"></i>
+                </div>
+                <input type="search" class="filter-input" placeholder="搜索"/>
+            </div>
+            <div class="row filter-items-row">
+                <div class="select-items">
+                    <div id="project-name" ng-class="showProjectName?'project-name':'person-select'" ng-click="selectScreening('status')">
+                        状态
+                    </div>
+                    <div id="person-select" ng-class="!showProjectName?'project-name':'person-select'" ng-click="selectScreening('type')">
+                        类型
+                    </div>
+                </div>
+                <ion-scroll class="items-bg">
+                    <div class="items-detail" ng-show="showProjectName"
+                         ng-repeat="i in statusArr track by $index"
+                         ng-class="{'select-item-color':i.checked}"
+                         ng-cloak
+                         ng-click="selectFilterItem(i,statusArr)">
+                        {{i.status_name}}
+                        <i class="ion-checkmark-round" ng-if="i.checked"></i>
+                    </div>
+                    <div class="items-detail" ng-hide="showProjectName"
+                         ng-repeat="i in typesArr track by $index"
+                         ng-class="{'select-item-color':i.checked}"
+                         ng-cloak
+                         ng-click="selectFilterItem(i,typesArr)">
+                        {{i.type_name}}
+                        <i class="ion-checkmark-round" ng-if="i.checked"></i>
+                    </div>
+
+                </ion-scroll>
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</div>

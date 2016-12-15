@@ -1,0 +1,443 @@
+<ion-modal-view class="workflow-detail">
+    <ion-header-bar align-title="center" class="bar-stable">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-arrow-back" ng-click="createModal.hide()">
+                <span class="back-text">返回</span>
+            </button>
+        </div>
+        <h1 class="title">新建申请</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="hms-workflow-array">
+            <div class="hms-singal-array-content">
+                <div class="hms-singal-array-line" ng-click="openTypeModal('flow')">
+                    <div class="hms-singal-array-key">申请流程:</div>
+                    <div class="hms-singal-array-value selectText">{{flowType}}<img class="selectImg"
+                                                                                    src="img/workflow/BackArrow@3x.png">
+                    </div>
+                </div>
+            </div>
+            <!--公出-->
+            <div ng-if="oneFlag">
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>业务信息
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">发起人:</div>
+                        <div class="hms-singal-array-value">K2admin</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">所属部门:</div>
+                        <div class="hms-singal-array-value">信息管理部</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">事项名称:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">随行人员:</div>
+                        <div class="hms-singal-array-value">Select Some Options</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">是否国外:</div>
+                        <div class="hms-singal-array-value">是</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">是否预定机票:</div>
+                        <div class="hms-singal-array-value">是</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">公出原因:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                </div>
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>出差行程安排
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">日期:</div>
+                        <div class="hms-singal-array-value">2016-05-04 8:30</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">地点:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                    <div class="hms-singal-array-line" ng-click="openTypeModal('trans')">
+                        <div class="hms-singal-array-key">交通工具:</div>
+                        <div class="hms-singal-array-value selectText">{{transText}}<img class="selectImg"
+                                                                                         src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">住宿地:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                </div>
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>费用预计
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">来源科目:</div>
+                        <div class="hms-singal-array-value selectText">差旅费用<img class="selectImg"
+                                                                                src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">目标科目:</div>
+                        <div class="hms-singal-array-value selectText">通讯补贴<img class="selectImg"
+                                                                                src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">预计金额:</div>
+                        <div class="hms-singal-array-value">¥ 请输入 元</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">借款金额:</div>
+                        <div class="hms-singal-array-value">¥ 请输入 元</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">预计总额:</div>
+                        <div class="hms-singal-array-value">¥ 请输入 元</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key">描述:</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="clear: right;">
+                        <div class="hms-singal-array-value" style="text-align: left">请填写描述信息</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key"><img class="attachmentImg"
+                                                               src="img/workflow/attachment@3x.png">添加附件
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--报销-->
+            <div ng-if="twoFlag">
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>基本信息
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">公司名称:</div>
+                        <div class="hms-singal-array-value">吉利控股集团</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">申请单号:</div>
+                        <div class="hms-singal-array-value">申请单号由系统自动生成</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">报销人姓名:</div>
+                        <div class="hms-singal-array-value">K2admin</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">部门:</div>
+                        <div class="hms-singal-array-value">管理部</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">收款人姓名:</div>
+                        <div class="hms-singal-array-value">K2admin</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">收款方所属银行:</div>
+                        <div class="hms-singal-array-value">工商银行</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">收款银行账号:</div>
+                        <div class="hms-singal-array-value">8888 8888 8888 8888</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">收款地址:</div>
+                        <div class="hms-singal-array-value">浙江省杭州市滨海支行</div>
+                    </div>
+                </div>
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>基本信息
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">出差事由:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">关联差旅申请:</div>
+                        <div class="hms-singal-array-value">北京采购申请单1,申请单2</div>
+                    </div>
+                </div>
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>报销明细
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">出发日期:</div>
+                        <div class="hms-singal-array-value">2016-05-04</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">到达日期:</div>
+                        <div class="hms-singal-array-value">2016-05-04</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">出发地:</div>
+                        <div class="hms-singal-array-value">杭州</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">到达地:</div>
+                        <div class="hms-singal-array-value">北京</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">成本中心:</div>
+                        <div class="hms-singal-array-value selectText">企业内部门户<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">科目:</div>
+                        <div class="hms-singal-array-value selectText">住宿费<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">金额:</div>
+                        <div class="hms-singal-array-value">200</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key">备注:</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="clear: right;">
+                        <div class="hms-singal-array-value" style="text-align: left">请填写备注信息</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key"><img class="attachmentImg" src="img/workflow/attachment@3x.png">添加附件
+                        </div>
+                    </div>
+                </div>
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>报销小计
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">分摊金额:</div>
+                        <div class="hms-singal-array-value">200</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">分摊方法:</div>
+                        <div class="hms-singal-array-value">按项目</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">成本中心:</div>
+                        <div class="hms-singal-array-value">企业内部门户网站</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合计金额:</div>
+                        <div class="hms-singal-array-value">200</div>
+                    </div>
+                </div>
+            </div>
+            <!--合同-->
+            <div ng-if="thrFlag">
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>申请人信息
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">申请人:</div>
+                        <div class="hms-singal-array-value">K2admin</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">联系号码:</div>
+                        <div class="hms-singal-array-value">18512313412</div>
+                    </div>
+                </div>
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>合同信息
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同编号:</div>
+                        <div class="hms-singal-array-value">合同编号由系统自动生成</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同名称:</div>
+                        <div class="hms-singal-array-value"></div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">起草人:</div>
+                        <div class="hms-singal-array-value"></div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">单位/部门:</div>
+                        <div class="hms-singal-array-value">管理部</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同标的:</div>
+                        <div class="hms-singal-array-value"></div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">引用单号:</div>
+                        <div class="hms-singal-array-value"></div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同分类:</div>
+                        <div class="hms-singal-array-value selectText">无<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同性质:</div>
+                        <div class="hms-singal-array-value selectText">付<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">送审日期:</div>
+                        <div class="hms-singal-array-value">2016-06-22</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同期限:</div>
+                        <div class="hms-singal-array-value">2016-07-22</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同对方:</div>
+                        <div class="hms-singal-array-value"></div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同对方联系人:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同文本类型:</div>
+                        <div class="hms-singal-array-value selectText">格式化<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同来源:</div>
+                        <div class="hms-singal-array-value selectText">请选择合同来源<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同文本编号:</div>
+                        <div class="hms-singal-array-value selectText">请选择合同文本编码<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同金额:</div>
+                        <div class="hms-singal-array-value">¥ 请输入 元</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">合同服务方式:</div>
+                        <div class="hms-singal-array-value selectText">分包<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">质保期限:</div>
+                        <div class="hms-singal-array-value">2016-07-22</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">是否有质保金:</div>
+                        <div class="hms-singal-array-value selectText">否<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">是否框架协议:</div>
+                        <div class="hms-singal-array-value selectText">否<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">收付款方式:</div>
+                        <div class="hms-singal-array-value selectText"><img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">项目归属部门:</div>
+                        <div class="hms-singal-array-value selectText">无<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key">收/付款方说明:</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="clear: right;">
+                        <div class="hms-singal-array-value" style="text-align: left">请填写收/付款方说明</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key">合同重要说明:</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="clear: right;">
+                        <div class="hms-singal-array-value" style="text-align: left">请填写合同重要说明</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key">合同文本:</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key"><img class="attachmentImg" src="img/workflow/attachment@3x.png">添加附件
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key">合同签订依据:</div>
+                    </div>
+                    <div class="hms-singal-array-line" style="border-bottom: none;">
+                        <div class="hms-singal-array-key"><img class="attachmentImg" src="img/workflow/attachment@3x.png">添加附件
+                        </div>
+                    </div>
+                </div>
+                <div class="hms-singal-array-header">
+                    <div class="hms-singal-array-name">
+                        <i class="ion-ios-sunny"></i>合同付款事项
+                    </div>
+                </div>
+                <div class="hms-singal-array-content">
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">日期:</div>
+                        <div class="hms-singal-array-value">2016-05-04</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">交通工具:</div>
+                        <div class="hms-singal-array-value selectText">月付<img class="selectImg" src="img/workflow/BackArrow@3x.png">
+                        </div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">付款条件:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">付款比例:</div>
+                        <div class="hms-singal-array-value">请填写</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">付款金额:</div>
+                        <div class="hms-singal-array-value">¥ 请填写 元</div>
+                    </div>
+                    <div class="hms-singal-array-line">
+                        <div class="hms-singal-array-key">备注:</div>
+                        <div class="hms-singal-array-value"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-center appMan">
+            <div class="col" style="color: #24559C;"><span style="color: #B95756;">*</span>审批人:</div>
+            <div class="col" style="color: #9B9B9B;">请选择审批人</div>
+            <div class="col text-right"><img class="rightArrow" src="img/workFlow/BackArrow@3x.png"></div>
+        </div>
+        <div class="my-info">
+            <button class="button button-block logout-button submitButton" ng-click="submit()">提交</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

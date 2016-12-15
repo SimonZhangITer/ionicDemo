@@ -1,0 +1,98 @@
+<style>
+    .createContact input{
+        border: none;
+        height: auto;
+        background: none;
+        width: 100%;
+    }
+</style>
+<ion-modal-view class="my-info-detail createContact">
+    <ion-header-bar align-title="center" class="bar-stable">
+        <div class="buttons">
+            <button class="button button-icon ion-ios-arrow-back" ng-click="createModal.hide()">
+                <span class="back-button-text">返回</span>
+            </button>
+        </div>
+        <h1 class="title">添加联系人</h1>
+        <div class="buttons">
+            <button class="button button-icon send-mail" ng-click="createModal.hide()">
+                <span class="back-button-text">完成</span>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="content-style">
+        <ion-item class="info-card-item1">
+            <div class="row card-row-with-bottom">
+                <div class="col col-20 normal-col">
+                    <label class="left-label">姓名：</label>
+                </div>
+                <div class="col col-80 normal-col">
+                    <label class="right-label"><input type="text"></label>
+                </div>
+            </div>
+            <div class="row card-row-with-bottom">
+                <div class="col col-20 normal-col">
+                    <label class="left-label">英文名：</label>
+                </div>
+                <div class="col col-80 normal-col">
+                    <label class="right-label"><input type="text"></label>
+                </div>
+            </div>
+            <div class="row card-row-with-bottom">
+                <div class="col col-20 normal-col">
+                    <div class="row no-space">
+                        <div class="icon-shelter">
+                            <img src="img/myInfo/icon-mail.png" class="mail-img"/>
+                        </div>
+                        <label class="left-icon-label">邮箱：</label>
+                    </div>
+                </div>
+                <div class="col col-80 normal-col">
+                    <label class="right-label"><input type="text"></label>
+                </div>
+            </div>
+            <div class="row card-row-with-bottom">
+                <div class="col col-33 normal-col">
+                    <div class="row no-space">
+                        <div class="icon-shelter">
+                            <img src="img/myInfo/icon-social.png" class="social-img"/>
+                        </div>
+                        <label class="left-icon-label">QQ/Skype：</label>
+                    </div>
+                </div>
+                <div class="col col-67 normal-col">
+                    <label class="right-label"><input type="text"></label>
+                </div>
+            </div>
+            <div class="row card-row-with-bottom">
+                <div class="col col-33 normal-col">
+                    <div class="row no-space">
+                        <div class="icon-shelter">
+                            <img src="img/myInfo/icon-telephone.png" class="social-img"/>
+                        </div>
+                        <label class="left-icon-label">移动电话：</label>
+                    </div>
+                </div>
+                <div class="col col-67 normal-col">
+                    <label class="right-label"><input type="text"></label>
+                </div>
+            </div>
+            <div class="row card-row-without-bottom">
+                <div class="col col-33 normal-col">
+                    <div class="row no-space">
+                        <div class="icon-shelter">
+                            <img src="img/myInfo/icon-phone.png" class="phone-img"/>
+                        </div>
+                        <label class="left-icon-label">固定电话：</label>
+                    </div>
+                </div>
+                <div class="col col-67 normal-col">
+                    <label class="right-label"><input type="text"></label>
+                </div>
+            </div>
+        </ion-item>
+        <div class="portrait-shelter">
+            <img src="../../img/max.png" class="portrait-icon"/>
+        </div>
+    </ion-content>
+</ion-modal-view>

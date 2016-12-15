@@ -1,0 +1,16 @@
+<ion-view view-title="Contacts">
+    <ion-header-bar align-title="center" class="bar-stable">
+        <h1 class="title">通讯录</h1>
+        <div class="button button-clear button-icon ion-ios-plus-outline add-mail" style="color:white" ng-click="create()"></div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-alpha-scroll ng-model="contacts" key="name" subheader="true">
+            <div class="row row-center no-padding" ng-click="goDetail(item)">
+                <div class="col col-20 no-padding text-center"><img class="contact-img" src="{{item.face}}"></div>
+                <div class="col col-67 no-padding">{{item.name}}</div>
+                <div class="col col-10 no-padding text-center" ng-click="tel($event)"><img src="img/dial.png" style="width: 22px;"></div>
+            </div>
+            <!--<div>{{item.address}}</div>-->
+        </ion-alpha-scroll>
+    </ion-content>
+</ion-view>

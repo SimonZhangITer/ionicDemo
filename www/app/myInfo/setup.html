@@ -1,0 +1,37 @@
+<ion-view class="setup">
+  <ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+      <button class="button button-icon ion-ios-arrow-back" ng-click="$ionicGoBack()">
+        <span class="back-button-text">返回</span>
+      </button>
+    </div>
+    <h1 class="title">设置</h1>
+  </ion-header-bar>
+  <ion-content class="content-style">
+    <ion-item class="setup-panel">
+      <div class="row setup-panel-row1">
+        <label class="setup-label">消息免打扰</label>
+      </div>
+      <div class="row setup-panel-row2">
+        <label class="setup-label">消息推送</label>
+      </div>
+      <div class="ts-toggle-position">
+        <label class="toggle toggle-positive">
+          <input type="checkbox" checked ng-click="clickTimesheetAuto()">
+          <div class="track setup-track">
+            <div class="handle setup-handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="message-toggle-position">
+        <label class="toggle toggle-positive">
+          <input type="checkbox" ng-checked="messagePush" ng-click="clickMessagePush()">
+           <div class="track setup-track">
+             <div class="handle setup-handle"></div>
+           </div>
+        </label>
+      </div>
+
+    </ion-item>
+  </ion-content>
+</ion-view>

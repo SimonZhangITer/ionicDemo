@@ -1,0 +1,23 @@
+<ion-modal-view class="transmit-person-modal">
+  <ion-header-bar align-title="center" class="bar-stable">
+    <div class="transmit-search">
+      <div class="transmit-button">
+        <i class="ion-ios-search search-i"></i>
+      </div>
+      <input placeholder="搜索转交人" ng-model="transmitPersonFilter.value" ng-change="searchTransmitPerson()">
+    </div>
+    <div class="buttons">
+      <button class="button button-icon icon" ng-click="hideTransmitPerson()">
+        <span class="back-text">取消</span>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <hms-loading ng-if="loadingDataFlag"></hms-loading>
+    <ion-list ng-if="!loadingDataFlag">
+      <ion-item ng-repeat="person in transmitPerson" ng-click="selectTransmitPerson(person)">
+        {{person.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>

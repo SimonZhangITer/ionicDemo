@@ -1,0 +1,22 @@
+/* Empty. Add your own CSS if you like */
+.back-button {
+  color: white !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-border {
+  border: none !important;
+}
+.my-info .ion-gear-a{
+  font-size: 21px;
+  color: #bdbcbb;
+  position: relative;
+  top: 2px;
+}

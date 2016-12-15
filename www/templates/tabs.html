@@ -1,0 +1,33 @@
+<!--<ion-tabs class="tabs-icon-top tabs-color-active-positive">-->
+  <!--<ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">-->
+    <!--<ion-nav-view name="tab-dash"></ion-nav-view>-->
+  <!--</ion-tab>-->
+  <!--<ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">-->
+    <!--<ion-nav-view name="tab-chats"></ion-nav-view>-->
+  <!--</ion-tab>-->
+  <!--<ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">-->
+    <!--<ion-nav-view name="tab-account"></ion-nav-view>-->
+  <!--</ion-tab>-->
+<!--</ion-tabs>-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive" ng-class="{'tabs-item-hide': hideTabs}">
+
+  <!-- Message Tab -->
+  <ion-tab title="邮件" icon-off="message-off" icon-on="message-on" href="#/tab/mail">
+    <ion-nav-view name="tab-mail"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Application Tab -->
+  <ion-tab title="通讯录" icon-off="application-off" icon-on="application-on" href="#/tab/contact">
+    <ion-nav-view name="tab-contact"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Contact Tab -->
+  <ion-tab title="工作流" icon-off="contact-off" icon-on="contact-on" href="#/tab/workFlow">
+    <ion-nav-view name="tab-workFlow"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="我的" icon-off="mine-off" icon-on="mine-on" href="#/tab/myInfo">
+    <ion-nav-view name="tab-myInfo"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>

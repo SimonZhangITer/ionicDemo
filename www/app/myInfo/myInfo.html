@@ -1,0 +1,97 @@
+<ion-view hide-nav-bar="true" class="my-info">
+  <div id="portrait-image" class="shrink-image" style="background: url('img/myInfo/background.png');background-size: 100% 100%;background-position: center;background-repeat: no-repeat;">
+  </div>
+  <ion-content class="content-style" has-bouncing="true" elastic-image="portrait-image">
+    <ion-item class="header-item" ng-click="checkMyInfo()">
+      <div class="header-item-image-row">
+        <img ng-src="img/myInfo/temporary-portrait.png" class="header-image"/>
+      </div>
+      <div class="header-item-label-row1">
+        <label class="name-label">张韧</label>
+      </div>
+      <div class="header-item-label-row2">
+        <label class="employee-number-label">8474</label>
+      </div>
+    </ion-item>
+    <button class="button button-icon setup-button" ng-click="setup()">
+      <img src="img/myInfo/setup.png" class="setup-image"/>
+    </button>
+    <ion-item class="info-item">
+      <div class="row icon-row">
+        <div class="col col-33 center-style">
+          <img src="img/myInfo/position.png" class="col-image"/>
+        </div>
+        <div class="col col-33 center-style">
+          <img src="img/myInfo/level.png" class="col-image"/>
+        </div>
+        <div class="col col-33 center-style">
+          <img src="img/myInfo/baseland.png" class="col-image"/>
+        </div>
+      </div>
+      <div class="row text-row">
+        <div class="col col-33 center-style">
+          <label class="info-text-label">软件工程师</label>
+        </div>
+        <div class="col col-33 center-style">
+          <label class="info-text-label">T5</label>
+        </div>
+        <div class="col col-33 center-style">
+          <label class="info-text-label">上海</label>
+        </div>
+      </div>
+    </ion-item>
+    <div class="colorful-part" style="height: auto;">
+      <!--<ion-item class="login-item" ng-click="">-->
+        <!--<div class="row login-item-row">-->
+          <!--<div class="login-icon-shelter">-->
+            <!--<img src="img/myInfo/mode.png" class="login-icon"/>-->
+          <!--</div>-->
+          <!--<label class="login-label">登录方式</label>-->
+        <!--</div>-->
+        <!--<img src="img/application/dorm-apply/arrow-gray.png" class="arrow-icon"/>-->
+      <!--</ion-item>-->
+      <ion-item class="feedback-item" ng-click="feedback()">
+        <div class="row feedback-item-row">
+          <div class="login-icon-shelter">
+            <img src="img/myInfo/feedback.png" class="feedback-icon"/>
+          </div>
+          <label class="login-label">意见反馈</label>
+        </div>
+        <img src="img/application/dorm-apply/arrow-gray.png" class="arrow-icon"/>
+      </ion-item>
+    </div>
+    <div class="colorful-part">
+      <ion-item class="login-item" ng-click="">
+        <div class="row login-item-row">
+          <div class="login-icon-shelter">
+            <img src="img/myInfo/help.png" class="help-icon"/>
+          </div>
+          <label class="login-label">帮助</label>
+        </div>
+        <img src="img/application/dorm-apply/arrow-gray.png" class="arrow-icon"/>
+      </ion-item>
+      <ion-item class="feedback-item" ng-click="">
+        <div class="row feedback-item-row">
+          <div class="login-icon-shelter">
+            <img src="img/myInfo/version.png" class="help-icon"/>
+          </div>
+          <label class="login-label">版本更新</label>
+        </div>
+        <label class="version-label">当前版本V2.0.0_Alpha</label>
+        <img src="img/application/dorm-apply/arrow-gray.png" class="arrow-icon"/>
+      </ion-item>
+    </div>
+    <div class="colorful-part" style="height: auto;" ng-click="setup()">
+      <ion-item class="login-item" ng-click="" style="border-bottom: none">
+        <div class="row login-item-row">
+          <div class="login-icon-shelter">
+            <i class="ion-gear-a"></i>
+          </div>
+          <label class="login-label">设置</label>
+        </div>
+        <img src="img/application/dorm-apply/arrow-gray.png" class="arrow-icon"/>
+      </ion-item>
+    </div>
+    <button class="button button-block logout-button" ng-click="logout()">注销登录</button>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<style>
+  .new-dorm-apply-modal .checked{
+    color:#24559c
+  }
+</style>
+<ion-modal-view class="new-dorm-apply-modal">
+  <ion-header-bar class="header-color">
+    <h1 class="title title-color">请选择申请类型</h1>
+  </ion-header-bar>
+  <ion-content class="back-color">
+    <div class="change-line"></div>
+    <div class="list">
+      <div ng-repeat="x in typeArr" class="item apply-item" ng-class="{true:'checked'}[x.checked]" ng-click="chooseType(x)">{{x.name}}</div>
+    </div>
+  </ion-content>
+</ion-modal-view>

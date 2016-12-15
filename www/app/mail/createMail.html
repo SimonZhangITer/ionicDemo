@@ -1,0 +1,44 @@
+<ion-modal-view class="createMailModal">
+    <ion-header-bar align-title="center" class="bar-stable">
+        <div class="buttons">
+            <button class="button button-icon" ng-click="closeModal()">
+                <span class="back-button-text">取消</span>
+            </button>
+        </div>
+        <h1 class="title">新邮件</h1>
+
+        <div class="buttons">
+            <button class="button button-icon send-mail" ng-click="closeModal()">
+                <span class="back-button-text">发送</span>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="send-content">
+        <div>
+            <div class="row row-center send-row">
+                <div class="col col-20 send-to">收件人:</div>
+                <div class="col col-80">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="row row-center send-row">
+                <div class="col col-20 send-to">抄&nbsp;&nbsp;&nbsp;&nbsp;送:</div>
+                <div class="col col-80">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="row row-center send-row">
+                <div class="col col-20 send-to">密&nbsp;&nbsp;&nbsp;&nbsp;送:</div>
+                <div class="col col-80">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="row row-center send-row">
+                <input type="text" placeholder="主题" style="margin: 2px;">
+            </div>
+        </div>
+        <div>
+            <textarea rows="8"></textarea>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,64 @@
+<ion-view view-title="待办事项目" class="workflow">
+    <ion-header-bar align-title="center" class="bar-stable">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-arrow-back" ng-click="$ionicGoBack()">
+                <span class="back-text">返回</span>
+            </button>
+        </div>
+        <div class="title" ng-if="tilteFlag">
+            <div class="workflow-filter">
+                <a class="to-do-list" ng-click="fetchTodoList()"
+                   ng-class="{true: 'selected', false: 'no-selected'}[listStatus.todo.selected]">
+                    待处理
+                </a>
+                <a class="done-list" ng-click="fetchDoneList()"
+                   ng-class="{true: 'selected', false: 'no-selected'}[listStatus.done.selected]">
+                    已处理
+                </a>
+            </div>
+        </div>
+        <div class="title" ng-hide="tilteFlag">
+            <div class="workflow-filter">
+                <a class="to-do-list" ng-click="fetchTodoList()"
+                   ng-class="{true: 'selected', false: 'no-selected'}[listStatus.todo.selected]">
+                    未完成
+                </a>
+                <a class="done-list" ng-click="fetchDoneList()"
+                   ng-class="{true: 'selected', false: 'no-selected'}[listStatus.done.selected]">
+                    已完成
+                </a>
+            </div>
+        </div>
+
+    </ion-header-bar>
+    <ion-content class="has-daiwen-bar" delegate-handle="workflowListHandle">
+        <ion-refresher on-refresh="refresh()" pulling-text="正在刷新数据..." pulling-icon="ion-ios-loop">
+        </ion-refresher>
+        <div class="hms-hide-content" ng-if="fetchDataFlag">
+            <div class="content">获取代办事项数据中</div>
+            <div class="hide-icon">
+                <ion-spinner icon="ios" class="spinner spinner-ios"></ion-spinner>
+            </div>
+        </div>
+        <hms-workflow-list ng-if="!fetchDataFlag" ng-repeat="item in list"
+                           workflow-title='item.title1'
+                           workflow-icon='item.icon'
+                           workflow-type='item.type'
+                           workflow-type-value='item.typeValue'
+                           workflow-node='item.node'
+                           workflow-node-value='item.nodeValue'
+                           workflow-submit='item.submit'
+                           workflow-submit-person='item.submitPerson' ng-click="enterWorkflowDetail(item)">
+        </hms-workflow-list>
+    </ion-content>
+    <ion-footer-bar class="foot-bar" style="bottom: 0px;">
+        <div class="buttons">
+            <button class="button button-clear filter-icon" ng-click="filterTsInfo()">
+            </button>
+            <div class="filter-text" ng-click="filterTsInfo()">筛选</div>
+            <!--<button class="button button-clear time-icon">-->
+            <!--</button>-->
+            <!--<div class="time-text">时间</div>-->
+        </div>
+    </ion-footer-bar>
+</ion-view>

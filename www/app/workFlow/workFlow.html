@@ -1,0 +1,26 @@
+<ion-view view-title="详情">
+    <ion-header-bar align-title="center" class="bar-stable">
+        <h1 class="title">工作流</h1>
+    </ion-header-bar>
+    <ion-content class="myWorkFlow">
+        <div class="row row-center applyRow" ng-click="goState('tab.workFlow-waitThings',false)">
+            <div class="col col-20 col-center text-center">
+                <img class="applyImg" src="img/workflow/apply@3x.png">
+            </div>
+            <div class="col applyText">我的申请</div>
+        </div>
+        <div class="row row-center toDoRow" ng-click="goState('tab.workFlow-waitThings',true)">
+            <div class="col col-20 col-center text-center">
+                <img class="applyImg" src="img/workflow/todo@3x.png">
+            </div>
+            <div class="col applyText">我的待办</div>
+        </div>
+        <div class="row row-center toDoRow" style="background: #046DBA;" ng-click="goState('tab.workFlow-waitThings',false)">
+            <div class="col col-20 col-center text-center">
+                <img class="applyImg" src="img/workflow/CC@3x.png">
+            </div>
+            <div class="col applyText">抄送给我</div>
+        </div>
+    </ion-content>
+    <img class="createImg" ng-click="openModal()" src="img/workflow/create@3x.png">
+</ion-view>

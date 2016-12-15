@@ -1,0 +1,43 @@
+<ion-view view-title="反馈" class="feedback">
+  <ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+      <button class="button button-icon ion-ios-arrow-back" ng-click="goBack()">
+        <span class="back-button-text">返回</span>
+      </button>
+    </div>
+    <h1 class="title">反馈</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="commit()">
+        <span class="bar-right-button">提交</span>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="content-style">
+    <ion-item class="type-item">
+      <div class="row label-row">
+        <label class="feedback-label">反馈问题类型:</label>
+      </div>
+      <div class="row type-row1">
+        <div class="col col-33 common-col">
+          <button ng-class="{'button button-block non-selected-button':!qualityIssue[0],'button button-block selected-button':qualityIssue[0]}" ng-click="selectQualityIssue(0)">质量问题</button>
+        </div>
+        <div class="col col-33 common-col">
+          <button ng-class="{'button button-block non-selected-button':!qualityIssue[1],'button button-block selected-button':qualityIssue[1]}" ng-click="selectQualityIssue(1)">服务问题</button>
+        </div>
+        <div class="col col-33 common-col">
+          <button ng-class="{'button button-block non-selected-button':!qualityIssue[2],'button button-block selected-button':qualityIssue[2]}" ng-click="selectQualityIssue(2)">其他问题</button>
+        </div>
+      </div>
+      <div class="row type-row2">
+        <div class="col col-33 common-col">
+          <button ng-class="{'button button-block non-selected-button':!qualityIssue[3],'button button-block selected-button':qualityIssue[3]}" ng-click="selectQualityIssue(3)">优化问题</button>
+        </div>
+        <div class="col col-33 common-col">
+        </div>
+        <div class="col col-33 common-col">
+        </div>
+      </div>
+    </ion-item>
+    <textarea class="feedback-textarea" ng-model="feedbackInfo.info" placeholder="请填写产品质量问题反馈"></textarea>
+  </ion-content>
+</ion-view>

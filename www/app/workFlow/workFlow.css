@@ -1,0 +1,74 @@
+.myWorkFlow {
+  padding: 15px; }
+  .myWorkFlow .applyRow {
+    background: #5cbad3;
+    border-radius: 10px;
+    height: 68px; }
+  .myWorkFlow .applyImg {
+    width: 33px;
+    margin-left: 10px;
+    margin-top: 3px; }
+  .myWorkFlow .applyText {
+    font-size: 18px;
+    color: white; }
+  .myWorkFlow .toDoRow {
+    background: #6bb9f0;
+    border-radius: 10px;
+    height: 68px;
+    margin-top: 15px;
+    padding-top: 5px; }
+
+.createImg {
+  position: absolute;
+  bottom: 80px;
+  width: 64px;
+  left: 50%;
+  margin-left: -32px; }
+
+.workflow-detail .selectImg {
+  position: absolute;
+  width: 22px;
+  right: 12px; }
+.workflow-detail .selectText {
+  padding-right: 20px; }
+.workflow-detail .attachmentImg {
+  width: 20px;
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+  left: 4px; }
+.workflow-detail .appMan {
+  padding-left: 15px;
+  font-size: 16px;
+  background: white; }
+  .workflow-detail .appMan .rightArrow {
+    width: 24px;
+    position: absolute;
+    right: 12px;
+    margin-top: -9px; }
+.workflow-detail .submitButton {
+  background: #F99D32 !important;
+  width: 70% !important;
+  border-radius: 10px !important;
+  left: 10% !important;
+  margin-bottom: 50px; }
+
+.bar.bar-stable {
+  background-position: inherit; }
+
+.workflow-detail .hms-workflow-array {
+  box-shadow: 0 0 12px rgba(112, 115, 115, 0.5); }
+
+.workflow-detail .hms-workflow-array .hms-singal-array-header .hms-singal-array-name {
+  float: left;
+  height: 23px;
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 23px;
+  background: #ECF0F1;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+/*# sourceMappingURL=workFlow.css.map */

@@ -1,0 +1,133 @@
+<ion-view view-title="待办事项明细" class="workflow-detail">
+  <ion-header-bar align-title="center" style="background:none">
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-arrow-back" ng-click="$ionicGoBack()">
+        <span class="back-text">返回</span>
+      </button>
+    </div>
+    <h1 class="title" style="color: white">待办事项明细</h1>
+    <div class="buttons">
+      <button class="button button-clear" style="font-size: 26px">
+        <i class=""></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content ng-class="{'true':'detail-has-footer'}[workflowActionShowFlag]">
+
+    <div class="hms-workflow-history" ng-if="historyList.length>0">
+      <div class="history-slide">
+        <i class="ion-ios-arrow-right"></i>
+      </div>
+      <div style="margin-top: 48px;width:100%; position: absolute; border-bottom: 1px solid #FAFAFA;"></div>
+      <div class="history-content">
+        <ion-scroll direction="x" scrollbar-x="false" style="height: 136px">
+          <div style="height: 136px;width: 1050px;">
+            <div class="history-item" ng-repeat="history in historyList">
+              <div class="history-item-time-line" ng-bind="history.creation_date">
+              </div>
+              <div class="history-item-node-icon">
+                <img src="img/workflow/process-O@2x.png"/>
+              </div>
+              <div class="history-item-node-name" ng-bind="history.node_name">
+              </div>
+              <div class="history-item-employee" ng-bind="history.name">
+              </div>
+            </div>
+          </div>
+        </ion-scroll>
+      </div>
+    </div>
+
+    <div class="hms-workflow-array" ng-repeat="array in singalArrayList" ng-if="true">
+      <div class="hms-singal-array-header">
+        <div class="hms-singal-array-name">
+          <i class="ion-ios-sunny"></i>{{array.detail_title}};
+        </div>
+        <div class="hms-singal-array-operation" ng-click="showContent(array)">
+          <i ng-class="array.showFlag==true?'ion-ios-minus-outline':'ion-ios-plus-outline'"></i>
+        </div>
+      </div>
+      <div class="hms-singal-array-content" ng-if="array.showFlag">
+        <div class="hms-singal-array-line" ng-repeat="arrayItem in array.detail" ng-if="true">
+          <div class="hms-singal-array-key" ng-bind="arrayItem.item_name">
+          </div>
+          <div class="hms-singal-array-value" ng-bind="arrayItem.item_value">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hms-workflow-array" ng-repeat="array in multipleLine">
+      <div class="hms-singal-array-header">
+        <div class="hms-singal-array-name">
+          <i class="ion-ios-sunny"></i>{{array.title}};
+        </div>
+        <div class="hms-singal-array-link">
+          <a class="hms-array-selector">共{{array.arrayList.length}}条</a>
+          <a class="hms-array-selector" ng-click="toBack(array)"
+             ng-class="{'true':'no-activated'}[array.currentPage==1]">上一条</a>
+          <a class="hms-array-selector" ng-click="goForward(array)"
+             ng-class="{'true':'no-activated'}[array.currentPage==array.arrayList.length]">下一条</a>
+        </div>
+        <div class="hms-singal-array-operation" ng-click="showContent(array)">
+          <i ng-class="{'true':'ion-ios-minus-outline','false':'ion-ios-plus-outline'}[array.showFlag]"></i>
+        </div>
+      </div>
+      <div class="hms-singal-array-content" ng-if="array.showFlag">
+        <div class="hms-singal-array-line" ng-repeat="item in array.currentArray">
+          <div class="hms-singal-array-key" ng-bind="item.name">
+          </div>
+          <div class="hms-singal-array-value" ng-bind="item.value">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hms-extra-info" ng-if="isWaitThings">
+      <div class="hms-opinion">
+        <input class="" type="text" placeholder="请填写处理意见" ng-model="processExtroInfo.opinion">
+        </input>
+      </div>
+      <div class="hms-transmit" ng-click="chooseTransmitPerson()">
+        <div class="row row-col-no-padding">
+          <div class="col col-20 transmit-title row-col-no-padding">
+            转交人
+          </div>
+          <div class="col col-66 transmit-person row-col-no-padding">
+            {{processExtroInfo.transmitPerson.name}}
+          </div>
+          <div class="col col-10 row-col-no-padding">
+            <img src="img/workflow/select@3x.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+  <div class="hms-workflow-submit" ng-if="isWaitThings">
+    <div class="hms-workflow-reject" ng-click="submitAction(actionType.reject)">
+      拒绝
+    </div>
+    <div class="hms-workflow-other">
+      <div class="hms-workflow-function">
+        <div class="hms-work-approve" ng-click="submitAction(actionType.approve)">
+          <img src="img/workflow/approval2@3x.png"/>
+        </div>
+        <div class="hms-work-transmit" ng-click="submitAction(actionType.transmit)">
+          <img src="img/workflow/deliver@3x.png"/>
+        </div>
+      </div>
+      <div class="hms-workflow-other-alias">
+        <div class="hms-work-approve-alias">
+          同意
+        </div>
+        <div class="hms-work-transmit-alias">
+          转交
+        </div>
+      </div>
+    </div>
+    <div class="hms-workflow-back" ng-click="submitAction(actionType.back)">
+      退回
+    </div>
+  </div>
+</ion-view>

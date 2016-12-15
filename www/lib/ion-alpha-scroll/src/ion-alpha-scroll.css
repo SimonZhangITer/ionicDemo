@@ -1,0 +1,55 @@
+.ion_alpha_list_outer .list {
+    padding-right: 15px;
+}
+
+.ion_alpha_list_outer .item {
+    border-right: none;
+}
+.ion_alpha_list_outer .contact-line{
+    height: 1px;
+    background: #dad7d7;
+    width: 79%;
+    position: relative;
+    top: 45px;
+    margin-left: 17%;
+}
+
+.ion_alpha_sidebar {
+    position: fixed;
+    right: 0;
+    top: 28%;
+    height: 100%;
+    font-size: 12px;
+    color: #969393;
+}
+
+.ion_alpha_sidebar li {
+    line-height: 2;
+}
+
+.item-divider {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 5px;
+    background-color: #f1f6ff;
+    color: #4073b3;
+    font-weight: 500;
+    border:none;
+}
+
+.ion_alpha_list .item {
+    padding: 8px;
+}
+
+.contact-img {
+    border-radius: 50%;
+    width: 40px;
+    float: left;
+    margin-left: 6px;
+}
+
+.ion_alpha_list .item {
+    padding: 6px 8px 6px 16px;
+    border:none!important;
+
+}

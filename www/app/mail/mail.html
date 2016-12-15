@@ -1,0 +1,37 @@
+
+<ion-view view-title="邮件" class="message-list">
+  <ion-header-bar align-title="center" class="bar-stable">
+    <h1 class="title">邮件</h1>
+    <div class="button button-clear button-icon ion-ios-plus-outline add-mail" ng-click="openModal()"></div>
+  </ion-header-bar>
+  <ion-content>
+    <ion-refresher on-refresh="refresh()" pulling-text="正在刷新数据..." pulling-icon="ion-ios-loop"></ion-refresher>
+    <ion-list>
+      <ion-item class="no-padding" ng-click="goDetail(x)" ng-repeat="x in mailArr">
+        <div class="message-item">
+          <div class="message-introduce">
+            <img class="message-has-logo" src="img/application/profile@3x.png">
+          </div>
+          <div class="message-content">
+            <div class="message-title">
+              <i class="ion-record unRead" ng-hide="x.isRead"></i> {{x.from}}
+            </div>
+            <div class="message-line sub-title">
+              {{x.subject}}
+            </div>
+            <div class="message-line pre-content">
+              {{x.content}}
+            </div>
+          </div>
+          <div class="message-extro">
+            <div class="message-date">
+              {{x.time}}
+            </div>
+          </div>
+        </div>
+        <ion-option-button class="button-positive">已读</ion-option-button>
+        <ion-option-button class="button-assertive">删除</ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
