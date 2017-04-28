@@ -9,7 +9,7 @@ We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to cre
 
 For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
 
-```bash
+```bash 
 $ npm install -g ionic
 ```
 
